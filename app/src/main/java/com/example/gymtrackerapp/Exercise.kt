@@ -1,8 +1,6 @@
 package com.example.gymtrackerapp
 
-import androidx.activity.enableEdgeToEdge
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+
 
 class Exercise(exerciseName: String, muscleGroup: String, sets: Int, reps: String ){
 
@@ -22,6 +20,16 @@ class Exercise(exerciseName: String, muscleGroup: String, sets: Int, reps: Strin
     //Secondary constructor 2 - user does not know muscle group and sets//
     constructor(exerciseName: String, reps: String, placeholder: Boolean)
             : this(exerciseName, "Unknown Muscle Group", 0, reps )
+
+    //Initializing the varibales/attributes for the gym tracking//
+    init{
+        name = exerciseName
+        this.muscleGroup = muscleGroup
+        this.sets = sets
+        this.reps = reps
+    }
+
+    
 
 
 }
