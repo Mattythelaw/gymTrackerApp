@@ -1,5 +1,6 @@
 package com.example.gymtrackerapp
 
+import android.util.Log
 
 
 class Exercise(exerciseName: String, muscleGroup: String, sets: Int, reps: String ){
@@ -29,8 +30,27 @@ class Exercise(exerciseName: String, muscleGroup: String, sets: Int, reps: Strin
         this.reps = reps
     }
 
-    
+    //function that logs that the exercise has started
+    fun Start() {
+        Log.v("Exercise", "$name has started")
 
+    }
+    fun Complete() {
+        Log.v("Exercise", "$name has been completed")
+
+    }
+    fun Skip() {
+        Log.v("Exercise", "$name has been skipped")
+
+    }
+    fun MarkPersonalBest() : Boolean {
+        Log.v("Exercise", "$name is your personal best")
+
+    }
+    fun DisplayExercise( ) : String {
+        return "$name - $muscleGroup (Sets: $sets, Reps: $reps)"
+
+    }
 
 }
 
