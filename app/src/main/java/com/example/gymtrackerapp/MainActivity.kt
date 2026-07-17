@@ -14,9 +14,27 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
     val displayExercise = findViewById<TextView>(R.id.displayExercise)
-    var exerciseTxt = " "
+    var displayTxt = " "
 
-        
+    //Creating 6 exercise objects (mixing all three constructors
+
+    var exercise1 = Exercise( "Bicep Curls", "arms",
+        2, "till failure"   )
+    //Muscle group is unknown//
+    var exercise2 = Exercise("Goblet Squats",3, "15")
+    //muscle group and sets is unknown
+    var exercise3 = Exercise("Lateral Raises",
+        "till failure", true)
+
+    var exercise4 = Exercise("Bench Press", "chest",
+        2, "8" )
+
+    //secondary constructor 1 - no muscle group
+    var exercise5 = Exercise("Crunches", 3, "30")
+
+    //secondary constructor 2 - no muscle group and no sets
+    var exercise6 = Exercise("Hammer Curls", "till failure",
+        true )
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
