@@ -40,6 +40,11 @@ class MainActivity : AppCompatActivity() {
     var exercises = arrayOf<Exercise>(exercise1, exercise2, exercise3, exercise4,
         exercise5, exercise6)
 
+    // for loop to loop through and display exercises in exercise array
+    for (exercise in exercises){
+        displayTxt += "${exercise.DisplayExercise()}\n\n"
+    }
+
 
 
 
