@@ -44,6 +44,8 @@ class MainActivity : AppCompatActivity() {
     for (exercise in exercises){
         displayTxt += "${exercise.DisplayExercise()}\n\n"
     }
+        //setting the text onto TextView
+        displayExercise.text = displayTxt
 
 
 
