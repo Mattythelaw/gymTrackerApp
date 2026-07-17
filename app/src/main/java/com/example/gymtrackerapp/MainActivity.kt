@@ -36,6 +36,13 @@ class MainActivity : AppCompatActivity() {
     var exercise6 = Exercise("Hammer Curls", "till failure",
         true )
 
+    //Putting exercises into an array
+    var exercises = arrayOf<Exercise>(exercise1, exercise2, exercise3, exercise4,
+        exercise5, exercise6)
+
+
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
